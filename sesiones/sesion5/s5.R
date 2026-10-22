@@ -24,7 +24,7 @@ data(iris)                                 # Cargar datos
 View(iris)                                 # Ver datos
 iris2 <- iris[,1:4]                        # Eliminar variable respuesta (no supervisado)
 
-windows()
+dev.new()
 pairs(iris2)                               # Plots 2 a 2
 heatmap(as.matrix(iris2))                  # Heatmap sin escalar
 heatmap(as.matrix(scale(iris2)))           # Heatmap escalando
@@ -45,7 +45,7 @@ hc <- hclust(d,method = "complete")        # Jerarquizacion
 
 
 ##-- 3. Graficar jerarquizacion
-windows(14,7)                              # Abrir ventana grafica
+dev.new(width = 14, height = 7)                              # Abrir ventana grafica
 plot(hc,cex=0.7)                           # Dibujar dendograma             
 
 

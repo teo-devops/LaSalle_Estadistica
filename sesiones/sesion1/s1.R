@@ -340,7 +340,7 @@ round(100*prop.table(table(datos$Brand)),1)  # Tabla de porcentajes redondeados
 barplot(table(datos$Brand))                  
 
 # Diagrama de barras mejorado
-quartz()# windows()
+dev.new()
 barplot(sort(table(datos$Brand)),las=2)
 
 ##-- Ejercicio 1.5
@@ -390,7 +390,7 @@ with(datos,prop.table(table(PlanType,PrimaryUse),1)) # Proporciones por filas (c
 with(datos,prop.table(table(PlanType,PrimaryUse),2)) # Proporciones por columnas (condicionada)
 
 ##-- Barplot y mosaicplot
-quartz(10, 7) # Para Windows: windows(10,7)
+dev.new(width = 10, height = 7)
 
 par(mfrow=c(1,2),las=1)
 

@@ -329,7 +329,7 @@ var.imp <- c()                  # Gini
 for (i in 1:(ncol(d)-1)){
   ##-- Crear ventana grafica cada 9 graficos
   if((i-1) %% 9==0){
-    windows()
+    dev.new()
     par(mfrow=c(3,3))
   }
   
@@ -340,7 +340,7 @@ for (i in 1:(ncol(d)-1)){
 
 ##-- Los mas predictores
 sel.pr <- order(var.imp, decreasing=TRUE)[1:9]
-windows()
+dev.new()
 par(mfrow=c(3,3))
 for (i in sel.pr){
   x <- nbt[[i]][,1]
@@ -349,7 +349,7 @@ for (i in sel.pr){
 
 ##-- Los menos predictores
 sel.pr <- order(var.imp, decreasing=FALSE)[1:9]
-windows()
+dev.new()
 par(mfrow=c(3,3))
 for (i in sel.pr){
   x <- nbt[[i]][,1]

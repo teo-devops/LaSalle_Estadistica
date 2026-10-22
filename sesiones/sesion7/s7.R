@@ -54,7 +54,7 @@ test <- d[!train.sel,]
 ct.mod <- ctree(target ~ ., train,controls=ctree_control(maxdepth=3)) # Poco profundo para poder graficarlo
 
 ##-- Visualizarlo
-windows()
+dev.new()
 plot(ct.mod,type='extended')
 plot(ct.mod,type='simple')
 
