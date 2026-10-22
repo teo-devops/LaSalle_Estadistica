@@ -3,3 +3,5 @@
 __pycache__/
 .ipynb_checkpoints/
 tmp/
+# Ficheros que escriben los ejercicios (p. ej. s1)
+sesiones/*/salidas/
