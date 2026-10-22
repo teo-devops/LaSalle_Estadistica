@@ -1,0 +1,4 @@
+# Finales de línea LF siempre (evita CRLF de Windows)
+* text=auto eol=lf
+*.pdf binary
+*.xlsx binary
