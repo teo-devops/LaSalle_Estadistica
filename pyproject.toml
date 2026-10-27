@@ -18,11 +18,12 @@ dependencies = [
 ]
 
 [dependency-groups]
-# Opcional: interfaz web de Jupyter (`uv sync --group lab` o `make lab`).
-# En VS Code no hace falta.
+# Jupyter (servidor + JupyterLab). Se instala por defecto (default-groups)
+# para que PyCharm y `make lab` funcionen tras cualquier `uv sync`.
 lab = [
     "jupyterlab>=4.2,<5",
 ]
 
 [tool.uv]
 package = false
+default-groups = ["lab"]
