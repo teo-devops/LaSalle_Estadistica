@@ -6,3 +6,7 @@ tmp/
 .idea/
 # Ficheros que escriben los ejercicios (p. ej. s1)
 sesiones/*/salidas/
+
+*_sol.ipynb
+/recursos
+*.pptx
